@@ -1233,10 +1233,11 @@ any_key() {
     read -r -sn 1 -p "$(printf "%b" "${IGreen}${PROMPT}${Color_Off}")";echo
 }
 
-#lowest_compatible_nc() {
+lowest_compatible_nc() {
 if [ -z "$NCVERSION" ]
 then
-    nc_update
+    #nc_update
+	ip addr show
 fi
 if [ "${CURRENTVERSION%%.*}" -lt "$1" ]
 then
@@ -1274,7 +1275,8 @@ fi
 # shellcheck source=lib.sh
 if [ -z "$NCVERSION" ]
 then
-    nc_update
+    #nc_update
+	ip addr show
 fi
 if [ "${CURRENTVERSION%%.*}" -ge "$1" ]
 then
@@ -1428,7 +1430,8 @@ printf "%b%s%b\n" "$1" "$2" "$Color_Off"
 git_apply_patch() {
 if [ -z "$NCVERSION" ]
 then
-    nc_update
+    #nc_update
+	ip addr show
 fi
 if [[ "$CURRENTVERSION" = "$3" ]]
 then
