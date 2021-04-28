@@ -1276,7 +1276,7 @@ fi
 if [ -z "$NCVERSION" ]
 then
     #nc_update
-	ip addr show
+    ip addr show
 fi
 if [ "${CURRENTVERSION%%.*}" -ge "$1" ]
 then
@@ -1431,17 +1431,19 @@ git_apply_patch() {
 if [ -z "$NCVERSION" ]
 then
     #nc_update
-	ip addr show
+    ip addr show
 fi
 if [[ "$CURRENTVERSION" = "$3" ]]
 then
     curl_to_dir "https://patch-diff.githubusercontent.com/raw/nextcloud/${2}/pull" "${1}.patch" "/tmp"
-    install_if_not git
-    cd "$NCPATH"
-    if git apply --check /tmp/"${1}".patch >/dev/null 2>&1
+    ip addr show
+    #install_if_not git
+    #cd "$NCPATH"
+    #if git apply --check /tmp/"${1}".patch >/dev/null 2>&1
     then
-        print_text_in_color "$IGreen" "Applying patch https://github.com/nextcloud/${2}/pull/${1} ..."
-        git apply /tmp/"${1}".patch
+        ip addr show
+        print_text_in_color "$IGreen" "XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX-Applying patch https://github.com/nextcloud/${2}/pull/${1} ..."
+        #git apply /tmp/"${1}".patch
     fi
 fi
 }
